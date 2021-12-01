@@ -1,9 +1,7 @@
 const { readFileSync } = require("fs")
 const data = readFileSync("./input.txt").toString().split("\n")
-
 let largerSums = 0
 let lastValue = null
-
 for(let i = 1; i < data.length; i++){
     const firstValue = data[i - 1] ? parseInt(data[i - 1].trim()) : NaN
     const currentValue = data[i] ? parseInt(data[i].trim()) : NaN
@@ -17,10 +15,7 @@ for(let i = 1; i < data.length; i++){
         if(
             lastValue !== null &&
             lastValue < sum
-        ){
-            ++largerSums
-        }
-
+        ) ++largerSums
         lastValue = sum
     }   
 }
