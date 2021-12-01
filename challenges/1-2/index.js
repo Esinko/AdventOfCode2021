@@ -1,5 +1,4 @@
 const { readFileSync } = require("fs")
-const { off } = require("process")
 const data = readFileSync("./input.txt").toString().split("\n")
 
 let largerSums = 0
