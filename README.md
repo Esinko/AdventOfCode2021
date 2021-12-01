@@ -3,3 +3,4 @@
 <br>
 #### Naming scheme: \<day number\>-\<part number\>
 #### Code lives in /challenges
+#### Language: Node.JS
