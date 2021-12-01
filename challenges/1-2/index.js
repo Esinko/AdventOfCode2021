@@ -4,7 +4,7 @@ const data = readFileSync("./input.txt").toString().split("\n")
 let largerSums = 0
 let lastValue = null
 
-for(let i = 1;i < data.length; i++){
+for(let i = 1; i < data.length; i++){
     const firstValue = data[i - 1] ? parseInt(data[i - 1].trim()) : NaN
     const currentValue = data[i] ? parseInt(data[i].trim()) : NaN
     const nextValue = data[i + 1] ? parseInt(data[i + 1].trim()) : NaN
