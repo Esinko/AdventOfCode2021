@@ -3,4 +3,5 @@
 <br>
 #### Naming scheme: \<day number\>-\<part number\>
 #### Code lives in /challenges
-#### Language: Node.JS
+#### Language: Node.JS v16.13.0
+*(no dependencies required, not browser compatible)*
