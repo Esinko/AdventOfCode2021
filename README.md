@@ -5,3 +5,6 @@
 #### Code lives in /challenges
 #### Language: Node.JS v16.13.0
 *(no dependencies required, not browser compatible)*
+<br>
+<br>
+Support Advent of Code with 1$ or more: https://adventofcode.com/2021/support
