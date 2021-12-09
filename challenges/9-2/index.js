@@ -25,4 +25,4 @@ function findBasins(x, y, basins){
 }
 const lowPoints = grid.map((line, y) => line.map((number, x) => [grid[y - 1] ? grid[y - 1][x] : null, grid[y][x + 1] ?? null, grid[y + 1] ? grid[y + 1][x] : null, grid[y][x - 1] ?? null].every(aNumber => aNumber === null || aNumber > number) ? [x, y] : null)).flat(1).filter(number => number !== null)
 const basinLengths = (lowPoints.map(coord => findBasins(coord[0], coord[1])).map(basin => basin.length)).sort((a, b) => a - b).reverse()
-console.log("Sizes of three largest basins multiplied", basinLengths[0] * basinLengths[1] * basinLengths[2])
+console.log("Sizes of three largest basins multiplied:", basinLengths[0] * basinLengths[1] * basinLengths[2])
