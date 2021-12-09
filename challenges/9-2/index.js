@@ -1,6 +1,6 @@
 const { readFileSync } = require("fs")
 const data = readFileSync("./input.txt").toString().trim()
-const grid = data.split("\r\n").map(line => line.split("").map(number => parseInt(number)))
+const grid = data.split("\r\n").map(line => line.split("").map(Number))
 function findBasins(x, y, basins){
     if(!basins) basins = []
     const current = grid[y][x]
@@ -14,7 +14,7 @@ function findBasins(x, y, basins){
     for(const coord in valTable){
         const value = valTable[coord]
         if(!basins.includes(coord) && value !== 9 && value > current){
-            continueHere.push(coord.split(",").map(number => parseInt(number)))
+            continueHere.push(coord.split(",").map(Number))
         }
     }
     basins.push(x + "," + y)
