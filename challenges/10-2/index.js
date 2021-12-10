@@ -14,25 +14,21 @@ const pointTable = {
     ">": 4
 }
 const scores = []
-for(let i = 0; i < lines.length; i++){
-    const line = lines[i]
+for(const line of lines){
     let buffer = ""
     let errored = false
-    const chars = line.split("")
-    for(let ii = 0; ii < chars.length; ii++){
-        const char = chars[ii]
-        if(Object.keys(conversionTable).includes(char)) {
-            buffer += char
-            continue
+    for(const char of line.split("")){
+        if(Object.keys(conversionTable).includes(char)) buffer += char
+        else {
+            const expected = conversionTable[buffer[buffer.length - 1]]
+            if(char !== expected){
+                errored = true
+                break
+            }
+            buffer = buffer.split("")
+            buffer.pop()
+            buffer = buffer.join("")
         }
-        const expected = conversionTable[buffer[buffer.length - 1]]
-        if(char !== expected){
-            errored = true
-            break
-        }
-        buffer = buffer.split("")
-        buffer.pop()
-        buffer = buffer.join("")
     }
     if(buffer.length !== 0 && errored === false) {
         const expected = buffer.split("").map(char => conversionTable[char]).reverse()
