@@ -24,7 +24,7 @@ async function flash(x, y){
         // Top left
         [(x - 1) + "," + (y - 1)]: grid[y - 1] !== undefined ? grid[y - 1][x - 1] !== undefined ? grid[y - 1][x - 1] : null : null
     }
-    if(value > 9 && !stepFlashed.includes(x + "," + y)){
+    if(value > 9 && !stepFlashed.includes(x + "," + y)){ // Flash!
         ++flashes
         stepFlashed.push(x + "," + y)
         for(const coord in adjacent){

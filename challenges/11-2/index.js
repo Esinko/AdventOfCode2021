@@ -23,8 +23,7 @@ async function flash(x, y){
         // Top left
         [(x - 1) + "," + (y - 1)]: grid[y - 1] !== undefined ? grid[y - 1][x - 1] !== undefined ? grid[y - 1][x - 1] : null : null
     }
-    if(value > 9 && !stepFlashed.includes(x + "," + y)){
-        // Flash!
+    if(value > 9 && !stepFlashed.includes(x + "," + y)){ // Flash!
         stepFlashed.push(x + "," + y)
         for(const coord in adjacent){
             const xy = coord.split(",").map(Number)
@@ -47,7 +46,7 @@ for(let i = 0; i < steps; i++){
         grid[xy[1]][xy[0]] = 0
     }
     if(stepFlashed.length === grid.flat(1).length){
-        console.log("The first step on which all octopuses flash:", i +1)
+        console.log("The first step on which all octopuses flash:", i + 1)
         process.exit()
     }
 }
