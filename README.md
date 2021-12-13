@@ -5,6 +5,12 @@
 ***Naming scheme: \<day number\>-\<part number\>***<br>
 ***Code lives in /challenges***<br>
 ***Language: Node.JS v16.13.0***<br>
-*(no dependencies required, not browser compatible)*<br>
+<br>
+*No dependencies required<br>
+Input is provided as input.txt in working directory root<br>
+Not browser compatible<br>
+All scripts are individually executable<br>
+Expects line breaks to be \r\n*
+<br>
 <br>
 Support Advent of Code with 1$ or more: https://adventofcode.com/2021/support
